@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:test_project/core/local_storage/hive.dart';
 import 'package:test_project/ui/splash_screen/presentation/splash_page.dart';
 
@@ -9,9 +8,7 @@ void main() async {
   await StorageServiceMixin.initHive();
   
   runApp(
-    const ProviderScope(
-      child: MyApp(),
-    ),
+    const MyApp(),
   );
 }
 
